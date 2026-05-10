@@ -24,10 +24,15 @@ const Home = () => {
       <Link href="/login">
         <ThemedText>Login</ThemedText>
       </Link>
-      <Spacer height={100} />
 
+      <Spacer height={50} />
       <Link href="/register">
         <ThemedText>Register</ThemedText>
+      </Link>
+
+      <Spacer height={50} />
+      <Link href="/profile">
+        <ThemedText>This is a profile page</ThemedText>
       </Link>
 
     </ThemedView>

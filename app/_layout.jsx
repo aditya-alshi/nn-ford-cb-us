@@ -21,6 +21,10 @@ const RootLayout = () => {
 
         {/* For auth */}
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      
+
+        {/* For dashboard */}
+        <Stack.Screen name="(dashboard)" options={{ headerShown: false }} />
       </Stack>
 
       
