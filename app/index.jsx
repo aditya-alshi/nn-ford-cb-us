@@ -35,6 +35,11 @@ const Home = () => {
         <ThemedText>This is a profile page</ThemedText>
       </Link>
 
+      <Spacer height={50} />
+      <Link href="/signup">
+        <ThemedText>Sample Sign up</ThemedText>
+      </Link>
+
     </ThemedView>
   );
 };
