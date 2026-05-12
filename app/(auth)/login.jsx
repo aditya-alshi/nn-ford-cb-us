@@ -17,10 +17,13 @@ const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const { user } = useUser();
-  const handlePress = ()=> {
-      console.log("Login form submitted", email, password)
-      console.log(user)
+  const { login } = useUser();
+  const handlePress = async ()=> {
+      try{
+        await login(email, password)
+      }catch(error){
+        console.log(error.message)
+      }
   }
 
   return (

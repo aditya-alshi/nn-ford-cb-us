@@ -1,6 +1,7 @@
 import { Keyboard, StyleSheet, Text } from "react-native";
 import React, { useState } from "react";
 import { Link } from "expo-router";
+import { useUser } from "../../hooks/useUser"
 
 // Themed Component
 
@@ -16,8 +17,15 @@ const Register = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const handlePress = () => {
-    console.log(`User registered with email: ${email} and password: ${password}`);
+  const { register } = useUser();
+
+  const handlePress = async () => {
+    try{
+      await register(email, password)
+      // console.log(user)
+    }catch(error){
+      console.log(error)
+    }
   };
 
   return (
